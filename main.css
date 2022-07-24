@@ -1,0 +1,357 @@
+.infoSection {
+    background: url('./images/grassBackground.png') no-repeat;
+    background-size: cover; /* Resize the background image to cover the entire container */
+}
+
+.infoSectionInner {
+    max-width: 542px;
+    color: #ffffff;
+    padding-top: 156px;
+    padding-bottom: 128px;
+}
+
+.infoSectionTitle {
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 64px;
+}
+
+.infoSectionSubtitle {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 28px;
+    margin-top: 32px;
+    margin-bottom: 38px;
+}
+
+.ourWorksLink {
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 32px;
+    text-align: center;
+    color: #1B1C2B;
+    padding: 16px 21px;
+    background: #F3D033;
+    border-radius: 41px;
+}
+
+.creditSection {
+    padding: 63px 0 65px;
+    background: #FCFBF4;
+}
+
+.creditSectionTitleWrap {
+    display: flex;
+    justify-content: center;
+}
+
+.creditSectionTitle {
+    max-width: 881px;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 42px;
+    text-align: center;
+}
+
+.credits {
+    display: flex;
+    justify-content: space-between;
+    gap: 53px;
+    margin-top: 80px;
+    margin-inline: 45px;
+    align-items: flex-start;
+}
+
+.credit {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.creditCircle {
+    background: #F3D033;
+    border-radius: 50%;
+    height: 80px;
+    width: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-weight: 900;
+    font-size: 28px;
+    line-height: 36px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.creditText {
+    margin-top: 18px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 28px;
+    text-align: center;
+}
+
+.ourProductsSection {
+    padding-top: 63px;
+    padding-bottom: 86px;
+}
+
+.productsSectionHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mainPageTitle {
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 64px;
+}
+
+.mainPageLink {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 28px;
+}
+
+.productsSectionHeaderArrow {
+    margin-left: 13px;
+}
+
+.products {
+    margin-top: 64px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.productsMain {
+    position: relative;
+}
+
+.productOverlay {
+    position: absolute;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(329.39deg, #F3D033 -10.96%, rgba(243, 208, 51, 0.4) 103.96%);
+}
+
+.productsMainOverlay {
+    width: 47%;
+    background: linear-gradient(329.39deg, #F3D033 -10.96%, rgba(243, 208, 51, 0) 103.96%);
+}
+
+.productsMinor {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.minorProduct {
+    position: relative;
+}
+
+.productOverlayInner {
+    position: absolute;
+    bottom: 45px;
+    left: 56px;
+}
+
+.productsMainOverlayInner {
+    bottom: 76px;
+    left: 48px;
+}
+
+.projectName {
+    max-width: 293px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: 0.003em;
+    color: #FFFFFF;
+}
+
+.productsMainOverlayInner .projectName {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 36px;
+}
+
+.projectDescription {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 28px;
+    color: #FFFFFF;
+    opacity: 0.8;
+    max-width: 80%;
+    margin-top: 10px;
+}
+
+.projectLink {
+    margin-top: 20px;
+    color: white;
+}
+
+.projectLink img {
+    margin-left: 34px;
+}
+
+.featuresSection {
+    padding: 90px 0 94px;
+    background: #FCFBF4;
+}
+
+.featuresSectionInner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.featuresSectionTitle {
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 130%;
+    letter-spacing: 0.003em;
+    margin-bottom: 40px;
+}
+
+.featuresSectionSubtitle {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 32px;
+    letter-spacing: 0.01em;
+}
+
+.featuresBlock {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 33px;
+    margin-left: 26px;
+}
+
+.features {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 0;
+    gap: 35px;
+}
+
+
+.feature {
+    cursor: pointer;
+    background-color: #fff;
+    width: 226px;
+    height: 232px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.featureCircle {
+    margin-top: 30px;
+    margin-bottom: 15px;
+    background: #F3D033;
+    width: 86px;
+    height: 86px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.featureText {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 34px;
+    text-align: center;
+    letter-spacing: 0.01em;
+}
+
+.featureTextLowLineHeight {
+    line-height: 23px;
+}
+
+.activeFeature {
+    color: white;
+    background: #F3D033;
+    box-shadow: 4px 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+.industrySection {
+    padding: 27px 0 86px;
+}
+
+.industrySectionHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.solutions {
+    margin-top: 64px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.solution img {
+    outline: 10px solid #F3D033;
+    outline-offset: -10px;
+}
+
+.solutionBreadcrumbs {
+    margin-top: 21px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 28px;
+    color: #282938;
+    opacity: 0.7;
+}
+
+.solutionName {
+    margin-top: 16px;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 36px;
+}
+
+.partnersSection {
+    padding: 83px 0 113px;
+    background: #FCFBF4;
+}
+
+.partnerSectionInner {
+    text-align: center;
+}
+
+.partners {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 48px;
+}
+
+.partner {
+    background: #FFFFFF;
+    width: 296px;
+    height: 292px;
+    padding-top: 48px;
+}
+
+.partner img {
+    width: 168px;
+    height: 168px;
+}
+
+.blogSection {
+    padding: 60px 0 82px;
+}
+
+.blogItemsBlock {
+    margin-top: 72px;
+}
