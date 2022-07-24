@@ -1,11 +1,6 @@
 window.onload = () => {
     let block = null
-    if (/index.html/.test(window.location.href)) {
-        block = document.getElementById("main")
-        if (block) {
-            block.classList.add("active")
-        }
-    } else if (/products/.test(window.location.href)) {
+    if (/products/.test(window.location.href)) {
         block = document.getElementById("products")
         if (block) {
             block.classList.add("active")
@@ -22,6 +17,11 @@ window.onload = () => {
         }
     } else if (/contacts/.test(window.location.href)) {
         block = document.getElementById("contacts")
+        if (block) {
+            block.classList.add("active")
+        }
+    } else {
+        block = document.getElementById("main")
         if (block) {
             block.classList.add("active")
         }
