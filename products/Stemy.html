@@ -13,7 +13,6 @@
     <link rel="stylesheet" href="../index.css">
     <link rel="stylesheet" href="productInfo.css">
     <title>BILAB</title>
-    <script src="../index.js"></script>
 </head>
 <body>
 <header>
@@ -28,12 +27,18 @@
                         <li id="industries"><a href="../industries">Отрасли</a></li>
                         <li id="blog"><a href="../blog">Блог</a></li>
                         <li id="contacts"><a href="#">Контакты</a></li>
+                        <li class="languageSelectCollapsed"><a href="#">In English</a></li>
                     </ul>
                 </nav>
                 <a class="languageSelect"><img class="languageFlag" src="../images/En.svg" alt="">
                     <div>English</div>
                 </a>
                 <a class="headerContactUsButton">Связаться с нами</a>
+                <div onclick="toggleBurger()" class="toggle-menu">
+                    <div class="line line1"></div>
+                    <div class="line line2"></div>
+                    <div class="line line3"></div>
+                </div>
             </div>
         </div>
     </div>
@@ -76,110 +81,124 @@
     </div>
 </section>
 <section class="blogTextSection">
-        <div class="blogTextSectionInner">
+    <div class="blogTextSectionInner">
+        <div class="blogParagraph">
+            <div class="title">
+                Интернет маркетинг
+            </div>
+            <div class="blogTextBlock">
+                <div class="text">
+                    Если говорить о рекламе в целом, то существует огромное множество способов ее использования.
+                    Наиболее эффективный способ использования рекламы - Интернет-маркетинг.
+                    Основными причинами отсутствия активности использования данного способа рекламы
+                    сельскохозяйственными
+                    предприятиями является:
+                </div>
+                <ul class="blogList">
+                    <li class="text"><img class="blogListPoint" src="./images/Point.svg" alt="point">Дороговизна
+                        разработки
+                        собственного сайта в сети интернет.
+                    </li>
+                    <li class="text"><img class="blogListPoint" src="./images/Point.svg" alt="point">Отсутствие на
+                        предприятии
+                        специалистов достаточно высокого уровня, способных поддерживать бесперебойную работу сайта.
+                    </li>
+                    <li class="text"><img class="blogListPoint" src="./images/Point.svg" alt="point">Сложность в
+                        изменении
+                        размещенной на сайте информации, которая, зачастую, требует привлечение специалиста
+                        соответствующего профиля.
+                    </li>
+                </ul>
+                <div class="text">
+                    Система управления агробизнесом Stemy решает данные проблемы и предоставляет пользователям все
+                    необходимые инструменты для продвижения собственной компании в сети интернет!
+                </div>
+            </div>
+            <img style="margin-top: 42px;" src="./images/blog1Image1.png" alt="image1">
             <div class="blogParagraph">
                 <div class="title">
-                    Интернет маркетинг
+                    Взаимодествие с агрослужбами
                 </div>
                 <div class="blogTextBlock">
                     <div class="text">
-                        Если говорить о рекламе в целом, то существует огромное множество способов ее использования.
-                        Наиболее эффективный способ использования рекламы - Интернет-маркетинг.
-                        Основными причинами отсутствия активности использования данного способа рекламы
-                        сельскохозяйственными
-                        предприятиями является:
+                        В современном меняющемся мире, прогресс не стоит на месте.Развиваются технологии во всех сферах
+                        нашей экономики.
+                        Агропромышленный комплекс не является исключением. На данный момент существует множество новых
+                        разработок в областипитания растений,
+                        обработки почв и т.д. Основным источникоминформации в данном случае являются агрослужбы,
+                        которые, впоследнее время, набирают все более высокую популярность.
+                    </div>
+                    <div class="text">
+                        При использовании данного функционала «Stemy», агрослужбы получают возможность:
                     </div>
                     <ul class="blogList">
-                        <li class="text"><img class="blogListPoint" src="./images/Point.svg" alt="point">Дороговизна разработки
-                            собственного сайта в сети интернет.
+                        <li class="text"><img class="blogListPoint" src="./images/Point.svg" alt="point">
+                            Осуществлять постоянный контроль за соблюдением технологии выращивания культуры.
                         </li>
-                        <li class="text"><img class="blogListPoint" src="./images/Point.svg" alt="point">Отсутствие на предприятии
-                            специалистов достаточно высокого уровня, способных поддерживать бесперебойную работу сайта.
+                        <li class="text"><img class="blogListPoint" src="./images/Point.svg" alt="point">Диагностировать
+                            поля при помощи мобильного приложения «Stemy», которое значительно
+                            снижает время и трудозатраты насоставление анализа конкретного участка поля
                         </li>
-                        <li class="text"><img class="blogListPoint" src="./images/Point.svg" alt="point">Сложность в изменении
-                            размещенной на сайте информации, которая, зачастую, требует привлечение специалиста
-                            соответствующего профиля.
+                        <li class="text"><img class="blogListPoint" src="./images/Point.svg" alt="point">
+                            Создавать и редактировать рекомендации на основе выполненного анализа, которые могут быть в
+                            дальнейшем, удаленно,предоставлены руководителю организации.
+                        </li>
+                        <li class="text"><img class="blogListPoint" src="./images/Point.svg" alt="point">
+                            Хранить историю диагностирования полей в облаке и на мобильном устройстве.
                         </li>
                     </ul>
-                    <div class="text">
-                        Система управления агробизнесом Stemy решает данные проблемы и предоставляет пользователям все
-                        необходимые инструменты для продвижения собственной компании в сети интернет!
-                    </div>
                 </div>
-                <img style="margin-top: 42px;" src="./images/blog1Image1.png" alt="image1">
-                <div class="blogParagraph">
-                    <div class="title">
-                        Взаимодествие с агрослужбами
-                    </div>
-                    <div class="blogTextBlock">
-                        <div class="text">
-                            В современном меняющемся мире, прогресс не стоит на месте.Развиваются технологии во всех сферах нашей экономики.
-                            Агропромышленный комплекс не является исключением. На данный момент существует множество новых разработок в областипитания растений,
-                            обработки почв и т.д. Основным источникоминформации в данном случае являются агрослужбы, которые, впоследнее время, набирают все более высокую популярность.
-                        </div>
-                        <div class="text">
-                            При использовании данного функционала «Stemy», агрослужбы получают возможность:
-                        </div>
-                        <ul class="blogList">
-                            <li class="text"><img class="blogListPoint" src="./images/Point.svg" alt="point">
-                                Осуществлять постоянный контроль за соблюдением технологии выращивания культуры.
-                            </li>
-                            <li class="text"><img class="blogListPoint" src="./images/Point.svg" alt="point">Диагностировать поля при помощи мобильного приложения «Stemy», которое значительно
-                                снижает время и трудозатраты насоставление анализа конкретного участка поля
-                            </li>
-                            <li class="text"><img class="blogListPoint" src="./images/Point.svg" alt="point">
-                                Создавать и редактировать рекомендации на основе выполненного анализа, которые могут быть в дальнейшем, удаленно,предоставлены руководителю организации.
-                            </li>
-                            <li class="text"><img class="blogListPoint" src="./images/Point.svg" alt="point">
-                                Хранить историю диагностирования полей в облаке и на мобильном устройстве.
-                            </li>
-                        </ul>
-                    </div>
             </div>
+        </div>
     </div>
 </section>
 <footer>
     <div class="footerTop">
-        <img class="footerLogo" src="../images/BilabLogo.svg" alt="logo">
-        <div class="footerContacts">
-            <div class="footerContact">
-                <div class="footerContactTitle">Адрес</div>
-                <div class="footerContactText">
-                    Россия, 400005, Волгоград,
-                    <br>
-                    Высотный корпус № 5 («В») ВолгГТУ,
-                    <br>
-                    пр-кт. Ленина, 28а, 14 этаж, ауд. В-1407
+        <div class="container">
+            <div class="footerTopInner">
+                <div class="footerContacts">
+                    <img class="footerLogo" src="../images/BilabLogo.svg" alt="logo">
+                    <div class="footerContact">
+                        <div class="footerContactTitle">Контакты
+                        </div>
+                        <div class="footerContactText">
+                            (8442) 24-81-00
+                            <br>
+                            +7-917-835-06-76
+                            <br>
+                            bilab@vstu.ru
+                        </div>
+                    </div>
+                    <div class="footerContact">
+                        <div class="footerContactTitle">Адрес</div>
+                        <div class="footerContactText">
+                            Россия, 400005, Волгоград,
+                            <br>
+                            Высотный корпус № 5 («В») ВолгГТУ,
+                            <br>
+                            пр-кт. Ленина, 28а, 14 этаж, ауд. В-1407
+                        </div>
+                    </div>
+                    <div class="footerContact">
+                        <div class="footerContactTitle">График работы</div>
+                        <div class="footerContactText">
+                            Понедельник—пятница
+                            <br>
+                            9:00–17:00
+                        </div>
+                    </div>
+                </div>
+                <div class="footerSocials">
+                    <a href="#"><img src="../images/facebookIcon.svg" alt="facebook"></a>
+                    <a href="#"><img src="../images/mailIcon.svg" alt="mail"></a>
                 </div>
             </div>
-            <div class="footerContact">
-                <div class="footerContactTitle">Контакты
-                </div>
-                <div class="footerContactText">
-                    (8442) 24-81-00
-                    <br>
-                    +7-917-835-06-76
-                    <br>
-                    bilab@vstu.ru
-                </div>
-            </div>
-            <div class="footerContact">
-                <div class="footerContactTitle">График работы</div>
-                <div class="footerContactText">
-                    Понедельник—пятница
-                    <br>
-                    9:00–17:00
-                </div>
-            </div>
-        </div>
-        <div class="footerSocials">
-            <a href="#"><img src="../images/facebookIcon.svg" alt="facebook"></a>
-            <a href="#"><img src="../images/mailIcon.svg" alt="mail"></a>
         </div>
     </div>
     <div class="footerEnd">
         © BILAB 2022. Все права защищены.
     </div>
 </footer>
+<script src="../index.js"></script>
 </body>
 </html>

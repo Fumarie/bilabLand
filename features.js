@@ -1,12 +1,16 @@
 const featureText = [
-    ["Интеграция данных", "BILAB имеет большой опыт в реализации решений для интеграции данных на BI платформах."],
+    ["Интеграция данных", "Bilab имеет большой опыт в реализации решений для интеграции данных на BI платформах."],
     ["Big Data", "Использование Big Data помогает вашему предприятию управлять и извлекать выгоду из огромного объема данных, получаемых из постоянно увеличивающихся источников."],
-    ["Бизнес аналитика", "BILAB имеет большой опыт в реализации решений для интеграции данных на BI платформах."],
-    ["Инновационное развитие и перспективные проекты", ""],
-    ["Собственная разработка ПО", ""],
+    ["Бизнес аналитика", "Bilab имеет большой опыт в реализации решений для интеграции данных на BI платформах."],
+    ["Инновационное развитие", "Bilab помогает внедрять самые инновационные технологии в бизнес процессы своих заказчиков"],
+    ["Собственная разработка ПО", "Bilab имеет налаженную систему разработки новых продуктов на базе лаборатории"],
 ]
 
+let currentIndex = 0
+
 const changeFeature = (index) => {
+
+    currentIndex = index
 
     const textNode = document.getElementById("featureText")
 
@@ -25,4 +29,23 @@ const changeFeature = (index) => {
             elem.classList.remove("activeFeature")
         }
     })
+
+    reStartFeatureInterval()
+}
+
+const createFeatureInterval = () => {
+    return setInterval(() => {
+        if(currentIndex === 4) {
+            changeFeature(0)
+        } else {
+            changeFeature(currentIndex + 1)
+        }
+    }, 2000)
+}
+
+let interval = createFeatureInterval()
+
+const reStartFeatureInterval = () => {
+    clearInterval(interval)
+    interval = createFeatureInterval()
 }

@@ -5,6 +5,9 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+<!--    <meta http-equiv="Content-Security-Policy"-->
+<!--          content="font-src *; frame-ancestors https; img-src * data:; default-src * 'unsafe-eval' 'unsafe-inline'">-->
+    <!--    <meta http-equiv="Content-Security-Policy" content="frame-ancestors *;font-src 'self'; data:; img-src * data:; default-src * 'unsafe-eval' 'unsafe-inline';">-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&family=Quicksand&family=Roboto:wght@400;500;700&display=swap"
@@ -13,29 +16,33 @@
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="sharedBlog.css">
-    <script src="index.js"></script>
-    <script src="features.js"></script>
     <title>BILAB</title>
 </head>
 <body>
 <header>
     <div class="container">
         <div class="headerInner">
-            <a  href="index" class="headerLogo"><img src="./images/BilabLogo.svg" alt="logo"></a>
+            <a href="index" class="headerLogo"><img src="./images/BilabLogo.svg" alt="logo"></a>
             <div class="headerNavigation">
                 <nav>
                     <ul>
-                        <li id="main"><a  href="index">Главная</a></li>
+                        <li id="main"><a href="index">Главная</a></li>
                         <li id="products"><a href="products">Продукты</a></li>
                         <li id="industries"><a href="industries">Отрасли</a></li>
                         <li id="blog"><a href="blog">Блог</a></li>
                         <li id="contacts"><a href="#">Контакты</a></li>
+                        <li class="languageSelectCollapsed"><a href="#">In English</a></li>
                     </ul>
                 </nav>
                 <a class="languageSelect"><img class="languageFlag" src="./images/En.svg" alt="">
                     <div>English</div>
                 </a>
                 <a class="headerContactUsButton">Связаться с нами</a>
+                <div onclick="toggleBurger()" class="toggle-menu">
+                    <div class="line line1"></div>
+                    <div class="line line2"></div>
+                    <div class="line line3"></div>
+                </div>
             </div>
         </div>
     </div>
@@ -111,13 +118,13 @@
                 Наши продукты
             </div>
             <a href="products" class="mainPageLink">
-                Все продукты
+                <div class="mainPageLinkText">Все продукты</div>
                 <img class="productsSectionHeaderArrow" src="./images/Arrow1.svg" alt="arrow">
             </a>
         </div>
         <div class="products">
             <a href="#" class="productsMain">
-                <img src="./images/grassImage.png" alt="grass">
+                <img class="productsMainImg" src="./images/grassImage.png" alt="grass">
                 <div class="productOverlay productsMainOverlay">
                     <div class="productOverlayInner productsMainOverlayInner">
                         <div class="projectName">Газон</div>
@@ -133,7 +140,7 @@
             </a>
             <div class="productsMinor">
                 <a href="#" class="minorProduct">
-                    <img src="./images/oilImage.png" alt="oil">
+                    <img class="minorProductImg" src="./images/oilImage.png" alt="oil">
                     <div class="productOverlay">
                         <div class="productOverlayInner">
                             <div class="projectName">Цифровое нефтеперерабатывающее производство</div>
@@ -144,9 +151,8 @@
                         </div>
                     </div>
                 </a>
-                <a href="products/Stemy"
-                   class="minorProduct">
-                    <img src="./images/agriculturalImage.png" alt="agricultural">
+                <a href="products/Stemy" class="minorProduct">
+                    <img class="minorProductImg" src="./images/agriculturalImage.png" alt="agricultural">
                     <div class="productOverlay">
                         <div class="productOverlayInner">
                             <div class="projectName">Цифровое сельское хозяйство</div>
@@ -194,25 +200,25 @@
                     </div>
                     <div onclick="changeFeature(2)" class="feature">
                         <div class="featureCircle">
-                            <img src="./images/dataIntegrationIcon.svg" alt="dataIntegrationIcon">
+                            <img src="./images/businessAnalyticsIcon.svg" alt="icon">
                         </div>
                         <div class="featureText">
                             Бизнес аналитика
                         </div>
                     </div>
-                </div>
-                <div class="features">
                     <div onclick="changeFeature(3)" class="feature">
                         <div class="featureCircle">
-                            <img src="./images/dataIntegrationIcon.svg" alt="dataIntegrationIcon">
+                            <img src="./images/innovationsIcon.svg" alt="icon">
                         </div>
                         <div class="featureText featureTextLowLineHeight">
-                            Инновационное развитие и перспективные проекты
+                            Инновационное
+                            <br>
+                            развитие
                         </div>
                     </div>
                     <div onclick="changeFeature(4)" class="feature">
                         <div class="featureCircle">
-                            <img src="./images/dataIntegrationIcon.svg" alt="dataIntegrationIcon">
+                            <img src="./images/developmentIcon.svg" alt="icon">
                         </div>
                         <div class="featureText">
                             Собственная
@@ -230,7 +236,7 @@
         <div class="industrySectionHeader">
             <div class="mainPageTitle">Отраслевые решения</div>
             <a href="industries" class="mainPageLink">
-                Все отрасли
+                <div class="mainPageLinkText">Все отрасли</div>
                 <img class="productsSectionHeaderArrow" src="./images/Arrow1.svg" alt="arrow">
             </a>
         </div>
@@ -256,7 +262,7 @@
 <section class="partnersSection">
     <div class="container">
         <div class="partnerSectionInner">
-            <div class="mainPageTitle">Наши партнеры</div>
+            <div class="mainPageTitle">С нами работают</div>
             <div class="partners">
                 <div class="partner">
                     <img src="./images/partner1.png" alt="partner1">
@@ -280,62 +286,62 @@
             <div class="industrySectionHeader">
                 <div class="mainPageTitle">Блог о цифровизации</div>
                 <a href="blog" class="mainPageLink">
-                    Перейти в блог
+                    <div class="mainPageLinkText">Перейти в блог</div>
                     <img class="productsSectionHeaderArrow" src="./images/Arrow1.svg" alt="arrow">
                 </a>
             </div>
             <div class="blogItemsBlock">
-                <div class="blogItems">
+                <div class="blogBlock">
                     <div class="blogItem">
-                        <img src="./images/blogImage1.png" alt="blogImage">
-                        <div class="blogItemDate">МАРТ 24, 2021</div>
                         <div>
-                            <div class="textWrap">
-                                <div class="blogItemTitle">Система контроля технических устройств (СКТУ)</div>
-                                <div class="blogItemText">
-                                    Команда Лаборатории бизнес-аналитики “БИЛАБ” своими инновационными
-                                    научными решениями меняет облик различных отраслей российской экономики: сельского
-                                    хозяйства,
-                                    электроэнергет...
-                                </div>
-                                <a href="blog/1" class="blogItemLink">Читать далее <img src="./images/Arrow1.svg"
-                                                                                   alt="arrow"></a>
+                            <img class="blogItemImg" src="./images/blogImage1.png" alt="blogImage">
+                            <div class="blogItemDate">МАРТ 24, 2021</div>
+                            <div class="blogItemTitle">Система контроля технических устройств (СКТУ)</div>
+                        </div>
+                        <div>
+                            <div class="blogItemText">
+                                Команда Лаборатории бизнес-аналитики “БИЛАБ” своими инновационными
+                                научными решениями меняет облик различных отраслей российской экономики: сельского
+                                хозяйства,
+                                электроэнергет...
                             </div>
                         </div>
+                        <a href="blog/1" class="blogItemLink">Читать далее <img src="./images/Arrow1.svg"
+                                                                                alt="arrow"></a>
                     </div>
                     <div class="blogItem">
-                        <img src="./images/blogImage2.png" alt="blogImage">
-                        <div class="blogItemDate">АПРЕЛЬ 23, 2020</div>
-                        <div class="textWrap">
-                            <div>
-                                <div class="blogItemTitle">Формируем полезные привычки. Советы от нашей команды</div>
-                                <div class="blogItemText">
-                                    Насколько важно делать перерывы в работе? Столкнулась ли наши сотрудники с проблемой
-                                    перезагрузки и какие советы могут дать? Об этом в нашем новом блоге...
-                                </div>
-                            </div>
-                            <a href="#" class="blogItemLink">Читать далее <img src="./images/Arrow1.svg"
-                                                                               alt="arrow"></a>
+                        <div>
+                            <img class="blogItemImg" src="./images/blogImage2.png" alt="blogImage">
+                            <div class="blogItemDate">АПРЕЛЬ 23, 2020</div>
+                            <div class="blogItemTitle">Формируем полезные привычки. Советы от нашей команды</div>
                         </div>
+                        <div>
+                            <div class="blogItemText">
+                                Насколько важно делать перерывы в работе? Столкнулась ли наши сотрудники с проблемой
+                                перезагрузки и какие советы могут дать? Об этом в нашем новом блоге...
+                            </div>
+                        </div>
+                        <a href="#" class="blogItemLink">Читать далее <img src="./images/Arrow1.svg"
+                                                                           alt="arrow"></a>
                     </div>
                     <div class="blogItem">
-                        <img src="./images/blogImage3.png" alt="blogImage">
-                        <div class="blogItemDate">АПРЕЛЬ 15, 2020</div>
-                        <div class="textWrap">
-                            <div>
-                                <div class="blogItemTitle">Период адаптации на удаленной работе успешно преодолен.
-                                    Советы от
-                                    нашей команды
-                                </div>
-                                <div class="blogItemText">
-                                    • Все ребята предпочли оставить график работы таким же, чтобы не сбить привычный
-                                    режим и
-                                    распорядок дня...
-                                </div>
+                        <div>
+                            <img class="blogItemImg" src="./images/blogImage3.png" alt="blogImage">
+                            <div class="blogItemDate">АПРЕЛЬ 15, 2020</div>
+                            <div class="blogItemTitle">Период адаптации на удаленной работе успешно преодолен.
+                                Советы от
+                                нашей команды
                             </div>
-                            <a href="#" class="blogItemLink">Читать далее <img src="./images/Arrow1.svg"
-                                                                               alt="arrow"></a>
                         </div>
+                        <div>
+                            <div class="blogItemText">
+                                • Все ребята предпочли оставить график работы таким же, чтобы не сбить привычный
+                                режим и
+                                распорядок дня...
+                            </div>
+                        </div>
+                        <a href="#" class="blogItemLink">Читать далее <img src="./images/Arrow1.svg"
+                                                                           alt="arrow"></a>
                     </div>
                 </div>
             </div>
@@ -344,46 +350,59 @@
 </section>
 <footer>
     <div class="footerTop">
-        <img class="footerLogo" src="./images/BilabLogo.svg" alt="logo">
-        <div class="footerContacts">
-            <div class="footerContact">
-                <div class="footerContactTitle">Адрес</div>
-                <div class="footerContactText">
-                    Россия, 400005, Волгоград,
-                    <br>
-                    Высотный корпус № 5 («В») ВолгГТУ,
-                    <br>
-                    пр-кт. Ленина, 28а, 14 этаж, ауд. В-1407
+        <div class="container">
+            <div class="footerTopInner">
+                <div class="footerContacts">
+                    <img class="footerLogo" src="./images/BilabLogo.svg" alt="logo">
+                    <div class="footerContact">
+                        <div class="footerContactTitle">Контакты
+                        </div>
+                        <div class="footerContactText">
+                            (8442) 24-81-00
+                            <br>
+                            +7-917-835-06-76
+                            <br>
+                            bilab@vstu.ru
+                        </div>
+                    </div>
+                    <div class="footerContact">
+                        <div class="footerContactTitle">Адрес</div>
+                        <div class="footerContactText">
+                            Россия, 400005, Волгоград,
+                            <br>
+                            Высотный корпус № 5 («В») ВолгГТУ,
+                            <br>
+                            пр-кт. Ленина, 28а, 14 этаж, ауд. В-1407
+                        </div>
+                    </div>
+                    <div class="footerContact">
+                        <div class="footerContactTitle">График работы</div>
+                        <div class="footerContactText">
+                            Понедельник—пятница
+                            <br>
+                            9:00–17:00
+                        </div>
+                    </div>
+                </div>
+                <div class="footerSocials">
+                    <a href="#"><img src="./images/facebookIcon.svg" alt="facebook"></a>
+                    <a href="#"><img src="./images/mailIcon.svg" alt="mail"></a>
                 </div>
             </div>
-            <div class="footerContact">
-                <div class="footerContactTitle">Контакты
-                </div>
-                <div class="footerContactText">
-                    (8442) 24-81-00
-                    <br>
-                    +7-917-835-06-76
-                    <br>
-                    bilab@vstu.ru
-                </div>
-            </div>
-            <div class="footerContact">
-                <div class="footerContactTitle">График работы</div>
-                <div class="footerContactText">
-                    Понедельник—пятница
-                    <br>
-                    9:00–17:00
-                </div>
-            </div>
-        </div>
-        <div class="footerSocials">
-            <a href="#"><img src="./images/facebookIcon.svg" alt="facebook"></a>
-            <a href="#"><img src="./images/mailIcon.svg" alt="mail"></a>
         </div>
     </div>
     <div class="footerEnd">
         © BILAB 2022. Все права защищены.
     </div>
 </footer>
+<div>
+    <iframe allowfullscreen="allowfullscreen" height="450" src="https://yandex.ru/map-widget/v1/-/CBFnFStrLC"
+            width="600"></iframe>
+    <script src="https://yastatic.net/s3/frontend/forms/_/embed.js"></script>
+    <iframe src="https://forms.yandex.ru/cloud/62e2ae4a19caff4e21872e23/?iframe=1" frameborder="0"
+            name="ya-form-62e2ae4a19caff4e21872e23" width="650"></iframe>
+</div>
+<script src="index.js"></script>
+<script src="features.js"></script>
 </body>
 </html>

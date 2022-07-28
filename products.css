@@ -14,9 +14,6 @@
     font-family: 'Roboto', serif;
     font-style: normal;
     text-align: center;
-    font-weight: 700;
-    font-size: 48px;
-    line-height: 64px;
 }
 
 .aboutSubtitle {
@@ -26,10 +23,16 @@
     font-weight: 500;
     font-size: 16px;
     line-height: 28px;
-    margin: 24px 273px 0;
+    margin-top: 24px;
     color: #282938;
+    display: flex;
+    justify-content: center;
 
     opacity: 0.7;
+}
+
+.aboutSubtitleInner {
+    max-width: 60%;
 }
 
 .productsInner {
@@ -63,6 +66,14 @@
     justify-content: space-between;
 }
 
+@media screen and (max-width: 1300px) {
+    .products {
+        justify-content: center;
+    }
+}
+
+
+
 .product {
     width: 623px;
     margin-bottom: 64px;
@@ -71,6 +82,12 @@
 .productImage {
     outline: 10px solid #F3D033;
     outline-offset: -10px;
+}
+
+@media screen and (max-width: 720px) {
+    .productImage {
+        width: 100%;
+    }
 }
 
 .productInfo {
@@ -83,6 +100,16 @@
     font-weight: 700;
     font-size: 38px;
     line-height: 56px;
+}
+
+.hyphen {
+    display: none;
+}
+
+@media screen and (max-width: 370px){
+    .hyphen {
+        display: inline;
+    }
 }
 
 .productDescription {
@@ -109,9 +136,6 @@
 }
 
 .slogan {
-    font-weight: 600;
-    font-size: 48px;
-    line-height: 64px;
     text-align: center;
     color: #282938;
 }
@@ -136,4 +160,13 @@
     padding: 16px 39px;
     background: #FDD20C;
     border-radius: 41px;
+}
+
+@media screen and (max-width: 400px) {
+    .contactUsButton {
+        font-size: 14px;
+        line-height: 27px;
+
+        padding: 13px 30px;
+    }
 }
