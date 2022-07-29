@@ -1,0 +1,78 @@
+.title {
+    margin: 128px 0;
+    text-align: center;
+}
+
+.contactBlock {
+    margin: 0 auto 120px;
+    max-width: 1280px;
+    display: flex;
+}
+
+.leftContacts {
+    width: 50%;
+    background: #FCFBF4;
+    padding: 29px 22px;
+}
+
+.leftContactsRow {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 32px;
+}
+
+.leftContactsTitle {
+    font-weight: 600;
+    white-space: nowrap;
+    margin-right: 5px;
+}
+
+
+.rightContacts {
+    width: 50%;
+    height: 564px;
+}
+
+@media screen and (max-width: 1080px) {
+    .contactBlock {
+        flex-direction: column-reverse;
+        width: 100%;
+    }
+
+    .leftContacts {
+        width: calc(100% - 44px);
+    }
+
+    .rightContacts {
+        width: 100%;
+    }
+
+    .title {
+        margin: 64px 0;
+    }
+}
+
+.yandexFormWrap {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 118px;
+}
+
+.yandexForm {
+    width: 80%;
+}
+
+.yandexMapWrap {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.yandexMap {
+    height: 759px;
+    width: 100%;
+}

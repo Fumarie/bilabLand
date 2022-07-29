@@ -40,7 +40,7 @@ const createFeatureInterval = () => {
         } else {
             changeFeature(currentIndex + 1)
         }
-    }, 2000)
+    }, 3500)
 }
 
 let interval = createFeatureInterval()

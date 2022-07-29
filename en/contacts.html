@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&family=Quicksand&family=Roboto:wght@400;500;700&display=swap"
+          rel="stylesheet">
+    <link rel="stylesheet" href="../reset.css">
+    <link rel="stylesheet" href="../index.css">
+    <link rel="stylesheet" href="../contacts.css">
+    <title>BILAB</title>
+</head>
+<body>
+<header>
+    <div class="container">
+        <div class="headerInner">
+            <a href="index.html" class="headerLogo"><img src="../images/BilabLogo.svg" alt="logo"></a>
+            <div class="headerNavigation">
+                <nav>
+                    <ul>
+                        <li id="main"><a href="index.html">Home</a></li>
+                        <li id="products"><a href="products.html">Products</a></li>
+                        <li id="industries"><a href="industries.html">Industries</a></li>
+                        <li id="blog"><a href="blog.html">Blog</a></li>
+                        <li id="contacts"><a href="contacts.html">Contacts</a></li>
+                        <li class="languageSelectCollapsed"><a href="../index.html">На русском</a></li>
+                    </ul>
+                </nav>
+                <a href="../index.html" class="languageSelect"><img class="languageFlag" src="../images/En.svg" alt="">
+                    <div>Russian</div>
+                </a>
+                <a href="contacts.html" class="headerContactUsButton">Contact us</a>
+                <div onclick="toggleBurger()" class="toggle-menu">
+                    <div class="line line1"></div>
+                    <div class="line line2"></div>
+                    <div class="line line3"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<main>
+    <div class="mainPageTitle title">
+        Контакты
+    </div>
+    <div class="container">
+        <div class="contactBlock">
+            <div class="leftContacts">
+                <div class="leftContactsRow">
+                    <div class="leftContactsTitle">Адрес:</div>
+                    <div class="leftContactsText">&nbsp;400005, г. Волгоград, пр-кт. Ленина, 28, комната В-1407</div>
+                </div>
+                <div class="leftContactsRow">
+                    <div class="leftContactsTitle">Тел:</div>
+                    <div class="leftContactsText">&nbsp;+7 (917) 835 06 76</div>
+                </div>
+                <div class="leftContactsRow">
+                    <div class="leftContactsTitle">E-mail:</div>
+                    <div class="leftContactsText">&nbsp;bilab@vstu.ru</div>
+                </div>
+                <div class="leftContactsRow">
+                    <div class="leftContactsTitle">График Работы:</div>
+                    <div class="leftContactsText">&nbsp;Понедельник—пятница: 9:00–17:00</div>
+                </div>
+                <div class="leftContactsRow">
+                    <div class="leftContactsTitle">Как добраться:</div>
+                    <div class="leftContactsText">&nbsp;Высотный корпус № 5 («В») ВолгГТУ, пр-кт. Ленина, 28, 14 этаж,
+                        комната В-1407
+                    </div>
+                </div>
+            </div>
+            <div class="rightContacts">
+                <iframe allowfullscreen="allowfullscreen" height="100%"
+                        src="https://yandex.ru/map-widget/v1/-/CBFnFStrLC"
+                        width="100%"></iframe>
+            </div>
+        </div>
+        <div class="yandexFormWrap">
+            <div class="yandexForm">
+                <!--        YANDEX FORM-->
+                <script src="https://yastatic.net/s3/frontend/forms/_/embed.js"></script>
+                <iframe src="https://forms.yandex.ru/cloud/62e2ae4a19caff4e21872e23/?iframe=1"
+                        name="ya-form-62e2ae4a19caff4e21872e23" height="502px" width="100%"></iframe>
+                <!--        YANDEX FORM-->
+            </div>
+        </div>
+    </div>
+    <div class="yandexMapWrap">
+        <div class="yandexMap">
+            <!--        YANDEX MAP-->
+            <script type="text/javascript" charset="utf-8" async
+                    src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A314675c9921be4bd8e9be3c05b1abb03ce4779fd2dc9412fa8df522fefe8b3d7&amp;width=100%&amp;height=100%&amp;lang=ru_RU&amp;scroll=false"></script>
+            <!--        YANDEX MAP-->
+        </div>
+    </div>
+</main>
+<footer>
+    <div class="footerTop">
+        <div class="container">
+            <div class="footerTopInner">
+                <div class="footerContacts">
+                    <img class="footerLogo" src="../images/BilabLogo.svg" alt="logo">
+                    <div class="footerContact">
+                        <div class="footerContactTitle">Контакты
+                        </div>
+                        <div class="footerContactText">
+                            (8442) 24-81-00
+                            <br>
+                            +7-917-835-06-76
+                            <br>
+                            bilab@vstu.ru
+                        </div>
+                    </div>
+                    <div class="footerContact">
+                        <div class="footerContactTitle">Адрес</div>
+                        <div class="footerContactText">
+                            Россия, 400005, Волгоград,
+                            <br>
+                            Высотный корпус № 5 («В») ВолгГТУ,
+                            <br>
+                            пр-кт. Ленина, 28а, 14 этаж, ауд. В-1407
+                        </div>
+                    </div>
+                    <div class="footerContact">
+                        <div class="footerContactTitle">График работы</div>
+                        <div class="footerContactText">
+                            Понедельник—пятница
+                            <br>
+                            9:00–17:00
+                        </div>
+                    </div>
+                </div>
+                <div class="footerSocials">
+                    <a href="https://www.facebook.com/BILABVSTU/?ref=bookmarks"><img src="../images/facebookIcon.svg" alt="facebook"></a>
+                    <a href="#"><img src="../images/mailIcon.svg" alt="mail"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footerEnd">
+        © BILAB 2022. Все права защищены.
+    </div>
+</footer>
+<script src="../index.js"></script>
+</body>
+</html>

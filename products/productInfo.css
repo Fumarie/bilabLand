@@ -7,6 +7,25 @@
     margin-top: 128px;
 }
 
+.blogHeaderInner {
+    margin: 0 10px;
+}
+
+.blogHeaderTop {
+    display: flex;
+    justify-content: space-between;
+}
+
+@media screen and (max-width: 514px) {
+    .blogHeaderTop {
+        flex-direction: column;
+    }
+
+    .showProduct {
+        margin-top: 20px;
+    }
+}
+
 .subtitle {
     font-weight: 500;
     font-size: 24px;
@@ -15,16 +34,21 @@
     opacity: 0.8;
 }
 
+@media screen and (max-width: 401px) {
+    .subtitle {
+        font-size: 17px;
+        line-height: 25px;
+    }
+}
+
 .title {
     margin-top: 12px;
     font-weight: 600;
-    font-size: 48px;
-    line-height: 64px;
 }
 
 .headerText {
     max-width: 65%;
-    margin-top: 80px;
+    margin-top: 70px;
     font-weight: 500;
     font-size: 16px;
     line-height: 28px;
@@ -34,8 +58,16 @@
 
 .headerImageWrap {
     margin-top: 20px;
-    padding: 60px 87px 65px 88px;
+    padding: 5.7% 8.2% 6% 8.3%;
     background: linear-gradient(289.98deg, #F3D033 0%, rgba(243, 208, 51, 0.6) 100%);;
+}
+
+.headerImage {
+    width: 100%;
+}
+
+.blogTextBlockImg {
+    width: 100%;
 }
 
 .blogInfo {
@@ -44,6 +76,12 @@
     border-bottom: 1px solid rgba(40, 41, 56, 0.3);
     display: flex;
     justify-content: space-between;
+}
+
+@media screen and (max-width: 700px) {
+    .blogInfo {
+        flex-direction: column;
+    }
 }
 
 .clientInfo {
@@ -82,6 +120,7 @@
     display: flex;
     flex-direction: column;
     max-width: 842px;
+    margin: 0 10px;
 }
 
 .text {
@@ -103,4 +142,19 @@
 
 .blogListPoint {
     margin-right: 16px;
+}
+
+.showProduct {
+    white-space: nowrap;
+    width: 156px;
+    height: 15px;
+    display: block;
+    box-sizing: content-box;
+    padding: 16px;
+    background: #F3D033;
+    border-radius: 41px;
+}
+
+@media screen {
+    .show
 }

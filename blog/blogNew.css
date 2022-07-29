@@ -2,11 +2,12 @@
     display: flex;
     justify-content: center;
 }
-main{
+.shell main{
     display: flex;
     justify-content: center;
     max-width: 1280px;
     flex-wrap: wrap;
+    margin: 0 10px;
 }
 .headLine{
     text-align: center;
@@ -26,6 +27,15 @@ main{
     line-height: 28px;
     font-size: 16px;
 }
+@media screen and (max-width: 600px) {
+    .headLineMainText {
+        line-height: 44px;
+        font-size: 40px;
+    }
+}
+.headerImage {
+    width: 100%;
+}
 .articleContent{
     max-width: 842px;
     line-height: 28px;
@@ -42,6 +52,7 @@ main{
 /*margin-top: 100px;*/
 }
 .articleContentMainImages{
+    width: 100%;
     /*margin-bottom: 50px;*/
 }
 .articleContentMainHeader{
