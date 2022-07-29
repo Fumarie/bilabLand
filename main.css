@@ -1,9 +1,21 @@
 .infoSection {
-    background: url('./images/grassBackground.png') no-repeat;
+    background-repeat: no-repeat;
     background-size: cover; /* Resize the background image to cover the entire container */
+    position: relative;
+}
+
+.blurBlock {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 35.64%, rgba(0, 0, 0, 0) 100%);
 }
 
 .infoSectionInner {
+    position: sticky;
+    z-index: 99;
     max-width: 542px;
     color: #ffffff;
     padding-top: 156px;
